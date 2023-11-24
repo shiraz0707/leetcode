@@ -1,0 +1,15 @@
+# https://leetcode.com/problems/two-sum/
+
+def findTwoSum(nums, target):
+    index_arr = []
+
+    for i in range(len(nums)-1):
+        if (nums[i] + nums[i+1]) == target:
+            index_arr.append(i)
+            index_arr.append(i+1)
+    return index_arr
+
+
+nums = [2,7,11,15]
+target = 9
+print(findTwoSum(nums, target))
